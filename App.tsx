@@ -1,8 +1,9 @@
+
 import React, { useState } from 'react';
 import { 
   Activity, Brain, Dumbbell, Moon, Utensils, 
   Droplet, Microscope, BatteryCharging, Waves, 
-  Menu, ChevronRight, Info, HeartPulse, X, Sparkles
+  Menu, ChevronRight, Info, X, Sparkles
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import ChatBot from './components/ChatBot';
