@@ -2,7 +2,7 @@
 import { 
   Activity, Brain, Dumbbell, Moon, Utensils, 
   Droplet, Microscope, BatteryCharging, Waves, 
-  Info
+  Info, ShieldCheck, Flame, Apple
 } from 'lucide-react';
 
 export interface ContentSection {
@@ -30,11 +30,11 @@ export const pillars: Pillar[] = [
         heading: 'About the Author: Leonardo Bear',
         body: `Leonardo Bear is a specialist in anxiety, depression, and personal conflict management. He created **THE BEAR KING** method to boost integral evolution across physical, mental, spiritual, and social dimensions. He is the founder of **BEAR NUTRITION LABS** and developer of GLUCOFAT.
 
-*Disclaimer: This guide is based on scientific studies but any intervention must be guided by a qualified medical professional.*`
+> *Disclaimer: This guide is based on scientific studies but any intervention must be guided by a qualified medical professional.*`
       },
       {
         heading: 'The Bear Cycle (9 Pillars)',
-        body: `The "Healthy Life Cycle" is based on nine interconnected pillars:
+        body: `The "Healthy Life Cycle" is based on nine interconnected pillars. Neglecting one area burdens the others.
 1.  **Hormonal Intervention**
 2.  **Psychological & Emotional Balance**
 3.  **Regular Physical Activity**
@@ -43,9 +43,7 @@ export const pillars: Pillar[] = [
 6.  **Hepatic Balance (Liver)**
 7.  **Healthy Gut Microbiota**
 8.  **Body Alkalinization**
-9.  **Adequate Hydration**
-
-*Note: Neglecting one area burdens the others. You are a complete being.*`
+9.  **Adequate Hydration**`
       },
       {
         heading: 'Core Philosophy',
@@ -115,7 +113,7 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
 5.  **Focus on the Present:** Experience each day individually.`
       },
       {
-        heading: 'Mental Techniques',
+        heading: 'Productivity & Mental Techniques',
         body: `*   **"5 Minutes" Technique:** Commit to just 5 mins of a task to break procrastination.
 *   **The Chaos Technique:** Create programmed discomfort (e.g., dump a drawer) to force immediate organizing action.
 *   **Step-by-Step:** Focus *only* on the next micro-step (e.g., "put on shoes").
@@ -130,6 +128,15 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
 *   **4-7-8 Breathing:** Inhale 4s, Hold 7s, Exhale 8s ("whoosh").
 *   **Sensory Maneuver (Dive Reflex):** Splash face with ice water or hold ice cube. Stimulates vagus nerve, slows heart.
 *   **The 5 Senses:** Name 5 things you see, 4 touch, 3 hear, 2 smell, 1 taste.`
+      },
+      {
+        heading: 'Supplements for Anxiety',
+        body: `*   **Magnesium (L-Threonate, Bisglycinate):** Cognition and relaxation.
+*   **L-Theanine:** Relaxation without drowsiness.
+*   **Taurine:** Neuroprotector, regulates brain activity.
+*   **Rhodiola Rosea:** Adaptogen, reduces stress fatigue.
+*   **L-Tyrosine:** Focus and cognitive performance.
+*   **Vitamin B6 (P-5-P):** Synthesis of serotonin/GABA.`
       }
     ]
   },
@@ -141,22 +148,23 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
     sections: [
       {
         heading: 'Morning Stretching Routine (5 mins)',
-        body: `1.  **Cervical Stretch:** Tilt head side to side to release neck tension.
-2.  **Arm Stretch:** Cross arm over chest, pull gently (shoulder/arm muscles).
-3.  **Spinal Twist:** Seated, rotate torso to each side (spinal mobility).`
+        body: `1.  **Cervical Stretch:** Gently tilt head side to side to release neck tension.
+2.  **Arm Stretch:** Cross one arm over chest, pull gently targeting shoulder.
+3.  **Spinal Twist:** Seated, rotate torso to each side for mobility.
+*Benefits: Increases flexibility, improves posture, relieves tension.*`
       },
       {
         heading: 'Essential Exercises',
         body: `*   **Walking/Marching:** 10-20 mins daily. Deep breathing. Improves circulation.
-*   **Gentle Squats:** 3 sets of 10 reps. Feet shoulder-width, push hips back.
+*   **Gentle Squats:** 3 sets of 10 reps. Feet shoulder-width, push hips back like sitting.
 *   **Leg Raises:** 2 sets of 15 reps/leg. Lying on back, raise extended leg.
-*   **Child's Pose:** Kneel, lean forward, forehead on floor (30s).
-*   **Seated Spinal Twist:** Legs extended, cross one over, twist.`
+*   **Child's Pose:** Kneel, lean forward, forehead on floor (30s-1min).
+*   **Seated Spinal Twist:** Legs extended, cross one over, twist torso.`
       },
       {
         heading: 'Post-COVID Rehab',
         body: `*   **Respiratory:** Diaphragmatic breathing, Prolonged exhalation, Incentive spirometer.
-*   **Fatigue:** Use "Pacing" (alternate activity/rest). Do not push to exhaustion.
+*   **Fatigue Management:** Use "Pacing" (alternate activity/rest). Do not push to exhaustion.
 *   **Cognitive:** Puzzles, reading, memory games to fight "Brain Fog".`
       }
     ]
@@ -169,19 +177,19 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
     sections: [
       {
         heading: 'Optimized Sleep Routine',
-        body: `*   **Schedule:** Consistent bed/wake times.
+        body: `*   **Schedule:** Consistent bed/wake times (even weekends).
 *   **Environment:** Dark, Cool (18-22°C), Silent.
 *   **Avoid:** Screens (blue light), Caffeine/Nicotine, Heavy meals before bed.
 *   **Pre-Sleep:** Warm bath (salts/chamomile) or 4-7-8 Breathing.`
       },
       {
-        heading: 'Supplement Protocol (Consult Doctor)',
-        body: `*   **L-Theanine:** Relaxation without sedation (Green tea).
+        heading: 'Sleep Supplement Protocol',
+        body: `*   **L-Theanine:** Promotes alpha waves (calmness).
 *   **GABA:** Inhibitory neurotransmitter (Tranquility).
 *   **5-HTP:** Serotonin precursor -> Melatonin.
-*   **Inositol:** Brain function/anxiety reduction.
-*   **Ashwagandha KSM-66:** Reduces cortisol.
-*   **Valerian/Passionflower:** Calming herbs.
+*   **Inositol:** Reduces anxiety symptoms.
+*   **Ashwagandha KSM-66:** Reduces cortisol (stress hormone).
+*   **Valerian/Passionflower:** Calming herbal extracts.
 *   **Glycine:** Lowers body temp for sleep onset.
 *   **Melatonin:** Regulates circadian rhythm.`
       }
@@ -195,43 +203,42 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
     sections: [
       {
         heading: 'Weekly Fasting Plan: 16/8 (Standard)',
-        body: `**Window:** Eat 12 PM - 8 PM.
-*   **Mon:** Salad + Chicken + Brown Rice | Fruit Snack | Veggie Soup + Fish.
-*   **Tue:** Omelet (Spinach/Mushrooms) | Yogurt + Chia | Lean Meat + Roast Veg.
-*   **Wed:** Chickpea Salad + Tuna | Green Smoothie | Shredded Chicken + Pumpkin.
-*   **Thu:** Rice + Lentils + Salad | Avocado | Grilled Fish + Broccoli.
-*   **Fri:** Quinoa Salad + Chicken | Berries | Veggie Omelet.
-*   **Sat:** Mediterranean Salad | Nuts | Lean Meat + Grilled Veg.
-*   **Sun:** Chicken Curry + Rice | Tropical Smoothie | Light Soup.`
+        body: `**Fasting Window:** 8 PM to 12 PM next day. **Eating Window:** 12 PM - 8 PM.
+*   **Mon:** Lunch (Salad/Grilled Chicken/Brown Rice) | Snack (Fruits/Nuts) | Dinner (Veggie Soup/Baked Fish).
+*   **Tue:** Lunch (Omelet Spinach/Mushroom) | Snack (Yogurt/Chia) | Dinner (Lean Meat/Roast Veg).
+*   **Wed:** Lunch (Chickpea Salad/Tuna) | Snack (Green Smoothie) | Dinner (Shredded Chicken/Pumpkin).
+*   **Thu:** Lunch (Rice/Lentils/Salad) | Snack (Avocado/Lemon) | Dinner (Grilled Fish/Broccoli).
+*   **Fri:** Lunch (Quinoa Salad/Chicken) | Snack (Berries) | Dinner (Veggie Omelet).
+*   **Sat:** Lunch (Mediterranean Salad) | Snack (Nuts) | Dinner (Lean Meat/Grilled Veg).
+*   **Sun:** Lunch (Chicken Curry/Rice) | Snack (Tropical Smoothie) | Dinner (Light Soup).`
       },
       {
-        heading: 'Weekly Fasting Plan: Night-Time (16/8)',
-        body: `**Window:** Eat 10 AM - 6 PM (Skip Dinner).
-*   **Mon:** Scrambled Eggs + Avocado | Salad + Chicken | Berries.
-*   **Tue:** Green Smoothie | Baked Fish + Veg | Yogurt + Chia.
-*   **Wed:** Veggie Omelet | Rice + Lentils | Avocado.
-*   **Thu:** Boiled Eggs | Lean Meat + Pumpkin | Fruit Smoothie.
-*   **Fri:** Whole-wheat Bread + Chickpea Paste | Chicken Curry | Nuts.
-*   **Sat:** Protein Smoothie | Mediterranean Salad | Fruit.
-*   **Sun:** Scrambled Eggs | Grilled Fish | Pineapple/Mint Smoothie.`
+        heading: 'Weekly Fasting Plan: Night-Time Version',
+        body: `**Fasting Window:** 6 PM to 10 AM next day. **Eating Window:** 10 AM - 6 PM.
+*   **Mon:** Breakfast (Scrambled Eggs/Avocado) | Lunch (Salad/Chicken) | Snack (Berries).
+*   **Tue:** Breakfast (Green Smoothie) | Lunch (Baked Fish/Veg) | Snack (Yogurt/Chia).
+*   **Wed:** Breakfast (Veggie Omelet) | Lunch (Rice/Lentils) | Snack (Avocado).
+*   **Thu:** Breakfast (Boiled Eggs) | Lunch (Lean Meat/Pumpkin) | Snack (Fruit Smoothie).
+*   **Fri:** Breakfast (Whole-wheat Bread/Chickpea Paste) | Lunch (Chicken Curry) | Snack (Nuts).
+*   **Sat:** Breakfast (Protein Smoothie) | Lunch (Mediterranean Salad) | Snack (Fruit).
+*   **Sun:** Breakfast (Scrambled Eggs) | Lunch (Grilled Fish) | Snack (Pineapple/Mint Smoothie).`
       },
       {
-        heading: 'Advanced Protocol',
-        body: `*   **Mon/Thu/Sat:** Classic 16/8.
-*   **Tue/Sun:** Moderate 14/10.
-*   **Wed:** Full 24h Fast (Liquids only).
-*   **Fri:** 5:2 (Calorie restriction 500kcal).`
-      },
-      {
-        heading: 'Supplements (Metabolic & Appetite)',
+        heading: 'Metabolic Accelerators',
         body: `*   **Alpha-Lipoic Acid:** Insulin sensitivity.
 *   **Zinc/Magnesium (ZMA):** Hormonal balance/Sleep.
 *   **Chromium Picolinate:** Reduces sweet cravings.
 *   **Spirulina/Glucomannan:** Satiety fibers.
 *   **Apple Cider Vinegar:** 2 tbsp in water (Blood sugar control).
-*   **Okralin:** Fat binder.
+*   **Okralin:** Fat binder (absorbs dietary fat).
 *   **L-Carnitine/CLA/Safflower Oil:** Fat metabolism.
 *   **Yohimbine/Berberine:** Fat mobilization/Insulin sensitivity.`
+      },
+      {
+        heading: 'Foods to Avoid',
+        body: `*   **Gluten:** Can cause endocrine disorders and inflammation.
+*   **Milk:** Lactose and inflammatory proteins.
+*   **Xenoestrogens:** Plastics (BPA) - mimic estrogen. Use glass/stainless steel.`
       }
     ]
   },
@@ -244,14 +251,13 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
       {
         heading: 'Detox Protocol',
         body: `*   **Hydration:** 3L water/day.
-*   **Sweating:** Sauna/Exercise.
-*   **Cleansing Drink:** 5ml Apple Cider Vinegar + 1/2 Lemon + 300ml Honey Water (3x/day).
-*   **Juices:** Green (Kale/Apple), Purple (Beet/Carrot), Digestive (Pineapple/Mint).`
+*   **Sweating:** Sauna/Exercise (removes toxins).
+*   **Cleansing Drink:** 5ml Apple Cider Vinegar + 1/2 Lemon + 300ml Honey Water (3x/day).`
       },
       {
         heading: 'Weekly Liver Routine',
-        body: `*   **Mon:** Warm lemon water + Green Juice.
-*   **Tue:** ACV Protocol + Purple Juice + Sauna.
+        body: `*   **Mon:** Warm lemon water + Green Juice (Kale/Apple/Ginger).
+*   **Tue:** ACV Protocol + Purple Juice (Beet/Carrot/Orange) + Sauna.
 *   **Wed:** Aloe Vera Juice + Cucumber/Mint Juice.
 *   **Thu:** Dandelion Tea + Pineapple/Turmeric Juice.
 *   **Fri:** Lemon/Ginger Water + Watermelon/Mint Juice.
@@ -259,8 +265,11 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
 *   **Sun:** Turmeric/Honey Water + Carrot/Orange Juice.`
       },
       {
-        heading: 'Supplements',
-        body: `Milk Thistle (Silymarin), Dandelion, Chlorella/Spirulina, Curcumin.`
+        heading: 'Liver Supplements',
+        body: `*   **Milk Thistle (Silymarin):** Hepatoprotective, liver regeneration.
+*   **Dandelion:** Stimulates bile production.
+*   **Chlorella/Spirulina:** Eliminates heavy metals.
+*   **Curcumin:** Anti-inflammatory protection.`
       }
     ]
   },
@@ -272,13 +281,13 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
     sections: [
       {
         heading: 'Repair Protocol',
-        body: `1.  **Probiotics:** Kefir, Yogurt, Kombucha, Sauerkraut.
+        body: `1.  **Probiotics:** Kefir, Yogurt, Kombucha, Sauerkraut, Kimchi.
 2.  **Prebiotics:** Garlic, Onion, Banana, Oats, Flaxseed.
 3.  **Repair:** Glutamine, Zinc, Collagen, Omega-3.
 4.  **Protect:** Red berries, Green tea, Turmeric.`
       },
       {
-        heading: 'Weekly Meal Plan (Microbiota)',
+        heading: 'Weekly Meal Plan (Microbiota Focus)',
         body: `*   **Mon:** Yogurt+Kefir+Berries | Salad+Chicken | Veggie Soup+Turmeric.
 *   **Tue:** Green Smoothie | Quinoa+Chickpeas | Fish+Sweet Potato.
 *   **Wed:** Whole-wheat Bread+Avocado | Lentils+Rice | Spinach Omelet.
@@ -291,8 +300,8 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
         heading: 'Parasite Cleanse',
         body: `**Foods:** Garlic, Pumpkin Seeds, Papaya Seeds, Coconut Oil.
 **Herbs:** Wormseed (Mastruz), Artemisia, Black Walnut, Clove, Oregano Oil.
-**Colloidal Silver:** Antimicrobial (Strict supervision).
-**Medical:** Annual broad-spectrum antiparasitic drugs.`
+**Colloidal Silver:** Antimicrobial (Requires strict supervision).
+**Medical:** Annual broad-spectrum antiparasitic drugs (Consult doctor).`
       }
     ]
   },
@@ -304,13 +313,13 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
     sections: [
       {
         heading: 'Methods',
-        body: `*   **Sun-Charged Water:** Glass bottle, covered with cloth, 6 hours in sun. Add Himalayan salt + Lemon drops.
+        body: `*   **Sun-Charged Water:** Glass bottle, covered with cloth, 6 hours in sun. Add Himalayan salt + Lemon drops. Drink on empty stomach.
 *   **Baking Soda:** 1 tsp in water (neutralizes acidity/heartburn). Use moderately.
 *   **Cilantro:** Heavy metal detox, dissolves kidney stones.`
       },
       {
-        heading: 'Why?',
-        body: `Acidosis leads to bone loss (calcium mobilization), muscle loss, inflammation, and immune suppression.`
+        heading: 'Why Alkalize?',
+        body: `Acidosis (acidic pH) leads to bone loss (calcium mobilization), muscle loss, inflammation, immune suppression, and chronic disease susceptibility.`
       }
     ]
   },
@@ -323,8 +332,8 @@ Focusing on oneself is crucial. Exclusive dedication to others leads to exhausti
       {
         heading: 'Strategy',
         body: `*   **Goal:** 2.5L - 3L daily.
-*   **Warning:** Thirst is a late sign of dehydration.
-*   **Benefits:** Prevents blood thickening (Stroke/Thrombosis risk), aids digestion/kidneys, improves cognitive function.`
+*   **Warning:** Thirst is a *late* sign of dehydration.
+*   **Benefits:** Prevents blood thickening (Stroke/Thrombosis risk), aids digestion/kidneys, improves cognitive function, skin health.`
       }
     ]
   }

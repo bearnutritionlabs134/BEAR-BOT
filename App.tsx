@@ -1,9 +1,7 @@
 
 import React, { useState } from 'react';
 import { 
-  Activity, Brain, Dumbbell, Moon, Utensils, 
-  Droplet, Microscope, BatteryCharging, Waves, 
-  Menu, ChevronRight, Info, X, Sparkles
+  Menu, ChevronRight, X, Sparkles
 } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import ChatBot from './components/ChatBot';
@@ -13,6 +11,7 @@ const App: React.FC = () => {
   const [activeSection, setActiveSection] = useState('intro');
   const [isSidebarOpen, setIsSidebarOpen] = useState(true);
 
+  // Safety check: ensure activePillar exists
   const activePillar = pillars.find(p => p.id === activeSection) || pillars[0];
 
   return (
@@ -71,7 +70,7 @@ const App: React.FC = () => {
                       </div>
                     )}
                     {isSidebarOpen && isActive && (
-                      <ChevronRight size={16} className="text-bear-primary animate-pulse" />
+                      <ChevronRight size={16} className="text-bear-primary" />
                     )}
                   </button>
                 </li>
@@ -102,13 +101,13 @@ const App: React.FC = () => {
       )}
 
       {/* Main Content */}
-      <main className="flex-1 h-screen overflow-y-auto relative scrollbar-thin bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] bg-fixed">
+      <main className="flex-1 h-screen overflow-y-auto relative scrollbar-thin bg-bear-dark">
         <div className="max-w-5xl mx-auto p-6 md:p-12 pb-32">
           
           {/* Header Section */}
-          <div className="mb-12 animate-fadeIn">
+          <div className="mb-12">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700 backdrop-blur-sm">
+              <div className="p-3 bg-slate-800/80 rounded-2xl border border-slate-700">
                 {React.createElement(activePillar.icon, { size: 32, className: "text-bear-primary" })}
               </div>
               <div>
@@ -120,12 +119,12 @@ const App: React.FC = () => {
           </div>
 
           {/* Content Sections */}
-          <div className="grid gap-8 animate-slideUp">
+          <div className="grid gap-8">
             {activePillar.sections.map((section, index) => (
               <div 
                 key={index} 
                 className={`
-                  relative p-8 rounded-3xl border backdrop-blur-md transition-all duration-300 hover:shadow-2xl hover:shadow-bear-primary/5
+                  relative p-8 rounded-3xl border transition-all duration-300
                   ${section.highlight 
                     ? 'bg-red-900/10 border-red-500/30 hover:border-red-500/50' 
                     : 'bg-slate-900/60 border-slate-700/50 hover:border-bear-primary/30'
@@ -133,7 +132,7 @@ const App: React.FC = () => {
                 `}
               >
                 {section.highlight && (
-                  <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg animate-pulse">
+                  <div className="absolute -top-3 -right-3 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                     IMPORTANT
                   </div>
                 )}
@@ -150,6 +149,7 @@ const App: React.FC = () => {
                       ol: ({node, ...props}) => <ol className="space-y-2 list-decimal ml-4 marker:text-bear-accent" {...props} />,
                       li: ({node, ...props}) => <li className="pl-2" {...props} />,
                       p: ({node, ...props}) => <p className="leading-relaxed mb-4 last:mb-0" {...props} />,
+                      blockquote: ({node, ...props}) => <blockquote className="border-l-4 border-bear-accent pl-4 italic text-slate-400 my-4" {...props} />,
                     }}
                   >
                     {section.body}
